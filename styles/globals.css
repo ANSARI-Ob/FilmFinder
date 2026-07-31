@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================
+   FilmFinder Global Styles
+   Dark theme with a red accent color, kept intentionally simple.
+   =========================================================== */
+
+body {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+/* Reusable button styles (used with className="btn-primary" etc.) */
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover text-white font-semibold py-2 px-5 rounded-full transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-surface2 hover:bg-surface text-white font-semibold py-2 px-5 rounded-full border border-gray-700 transition-colors duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-surface2 border border-gray-700 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-surface rounded-xl overflow-hidden border border-gray-800 hover:border-accent transition-colors duration-200;
+  }
+}
+
+/* Simple scrollbar styling to match the dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
